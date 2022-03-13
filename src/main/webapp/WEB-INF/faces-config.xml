@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+    version="2.3">
+    
+    
+    
+	<managed-bean>
+		<managed-bean-name>geradorDeSenha</managed-bean-name>
+		<managed-bean-class>senha.sistema.GeradorDeSenha</managed-bean-class>
+		<managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>usuario</managed-bean-name>
+		<managed-bean-class>senha.sistema.Atendente</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>chamada</managed-bean-name>
+		<managed-bean-class>senha.sistema.Chamada</managed-bean-class>
+		<managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<display-name>senhas</display-name>
+		<from-view-id>/senhas.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cadastrar</from-outcome>
+			<to-view-id>/usuario.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>usuario</display-name>
+		<from-view-id>/usuario.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>enviar</from-outcome>
+			<to-view-id>/gerenciador.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

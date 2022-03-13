@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16426460340940" configfile="/Prototipo.sistema.senha/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="senhas" x="57" y="57" id="pf16426482844941" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16426482844942" path="/senhas.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="usuario" x="228" y="86" id="pf16426482844943" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16426490178364" inlinks="pf16426482844942" path="/usuario.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="gerenciador" x="432" y="48" id="pf16426490178365" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf16426490178364" path="/gerenciador.jsp"/>
+  <links id="pf16426482844942" target="pf16426482844943" source="pf16426482844941" outcome="cadastrar" redirect="true"/>
+  <links id="pf16426490178364" target="pf16426490178365" source="pf16426482844943" outcome="enviar">
+    <bendPoints d1Width="132" d1Height="59" d2Width="-87" d2Height="97"/>
+  </links>
+</pageflow:Pageflow>
